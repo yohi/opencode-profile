@@ -545,7 +545,7 @@ git add .devcontainer .gitignore .prettierrc.json .prettierignore .oxlintrc.json
 git commit -m "chore(setup): scaffold monorepo, devcontainer, and package stubs"
 ```
 
-- [ ] **Step 15: Push and open Draft PR**
+- [x] **Step 15: Push and open Draft PR**
 
 ```bash
 git push -u origin setup/foundation
@@ -556,7 +556,7 @@ gh pr create --draft \
   --body "Implements Task 0.1 from docs/superpowers/plans/2026-05-24-opencode-profile.md. Parent PR: n/a (targets main)."
 ```
 
-Record the printed Draft PR URL as **PR_0_1_URL**.
+Record the printed Draft PR URL as **PR_0_1_URL**: https://github.com/yohi/opencode-profile/pull/2
 
 ---
 
