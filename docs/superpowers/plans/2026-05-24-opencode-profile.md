@@ -855,7 +855,7 @@ npm run format:check
 
 Expected: 0 errors on all three.
 
-- [ ] **Step 7: Commit, push, open Draft PR**
+- [x] **Step 7: Commit, push, open Draft PR**
 
 ```bash
 git add packages/core/src/merge.ts packages/core/test/merge.test.ts
@@ -868,7 +868,7 @@ gh pr create --draft \
   --body "Implements Task 1.1 from docs/superpowers/plans/2026-05-24-opencode-profile.md. Parent PR: <PR_0_2_URL>."
 ```
 
-Record the URL as **PR_1_1_URL**.
+Record the URL as **PR_1_1_URL**: https://github.com/yohi/opencode-profile/pull/4
 
 ---
 
