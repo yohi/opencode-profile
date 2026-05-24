@@ -33,7 +33,7 @@ This document specifies a **profile switching system** that overlays per-profile
 
 ### 3.1 Overview
 
-```
+```text
 [ User shell ]
    │
    │  $ opencode-profile switch work
@@ -93,7 +93,7 @@ Priority order (first non-empty wins):
 
 ## 4. Profile File Layout
 
-```
+```text
 ~/.config/opencode/
 ├── opencode.jsonc                (base)
 ├── profile.active                (single-line state file, mode 0600)
@@ -139,7 +139,7 @@ The `concatKeys` set is extensible if future requirements demand additional conc
 
 ### 6.1 Monorepo Layout
 
-```
+```text
 opencode-profile/
 ├── .devcontainer/
 │   ├── devcontainer.json
@@ -260,7 +260,7 @@ export default ProfilePlugin
 
 ### 6.4 CLI Surface
 
-```
+```text
 opencode-profile switch <name>            Set the active profile.
 opencode-profile switch <name> --force    Set even if the overlay file does not exist.
 opencode-profile switch --none            Clear the active profile (deletes profile.active).
@@ -282,7 +282,7 @@ Exit codes: `0` success, `1` user error (e.g., non-existent profile), `2` intern
 
 ### 7.1 `switch` data flow
 
-```
+```text
 [User]
    │ opencode-profile switch work
    ▼
@@ -298,7 +298,7 @@ Exit codes: `0` success, `1` user error (e.g., non-existent profile), `2` intern
 
 ### 7.2 OpenCode startup data flow
 
-```
+```text
 Config.Service.loadInstanceState() → cfg (cached reference)
 PluginLoader loads @yohi/opencode-profile
 plugin.config(cfg) fires:
