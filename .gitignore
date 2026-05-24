@@ -10,3 +10,5 @@ coverage/
 
 # Local OpenCode source checkout (vendored for reference; not part of this repo)
 opencode/
+# OpenCode session data
+.omo/
