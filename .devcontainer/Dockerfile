@@ -2,8 +2,9 @@ FROM mcr.microsoft.com/devcontainers/typescript-node:24-bookworm
 
 # Bun (1.3.14) for parity with OpenCode upstream tooling.
 ARG BUN_VERSION=1.3.14
+ENV BUN_INSTALL=/usr/local/share/bun
 RUN curl -fsSL https://bun.sh/install | bash -s "bun-v${BUN_VERSION}" \
-    && ln -s /root/.bun/bin/bun /usr/local/bin/bun || true
+    && ln -s /usr/local/share/bun/bin/bun /usr/local/bin/bun || true
 
 # GitHub CLI for `gh pr create`.
 RUN apt-get update \

@@ -1,1 +1,3 @@
-export default ["packages/core", "packages/plugin", "packages/cli"]
+import { defineWorkspace } from "vitest/config"
+
+export default defineWorkspace(["packages/core", "packages/plugin", "packages/cli"])
