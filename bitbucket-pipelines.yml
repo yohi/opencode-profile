@@ -1,0 +1,31 @@
+image: node:24-bookworm-slim
+
+definitions:
+  caches:
+    npm: node_modules
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: CI (lint, typecheck, test)
+          runs-on:
+            - self.hosted
+            - linux.shell
+            - ubuntu-slim
+          caches: [npm]
+          script:
+            - npm ci
+            - npm run ci
+  pull-requests:
+    "**":
+      - step:
+          name: CI (lint, typecheck, test)
+          runs-on:
+            - self.hosted
+            - linux.shell
+            - ubuntu-slim
+          caches: [npm]
+          script:
+            - npm ci
+            - npm run ci

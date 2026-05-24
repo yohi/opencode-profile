@@ -570,7 +570,7 @@ Record the printed Draft PR URL as **PR_0_1_URL**: https://github.com/yohi/openc
 **Files:**
 - Create: `bitbucket-pipelines.yml`
 
-- [ ] **Step 1: Branch creation and base validation (inside the Devcontainer)**
+- [x] **Step 1: Branch creation and base validation (inside the Devcontainer)**
 
 ```bash
 git fetch origin
@@ -586,7 +586,7 @@ git merge-base --is-ancestor "${EXPECTED_BASE}" "${CURRENT_BRANCH}" \
 echo "OK: ${CURRENT_BRANCH} is a descendant of ${EXPECTED_BASE}."
 ```
 
-- [ ] **Step 2: Write `bitbucket-pipelines.yml`**
+- [x] **Step 2: Write `bitbucket-pipelines.yml`**
 
 The spec calls for "ubuntu-slim" runner. Bitbucket Pipelines exposes runner selection via `runs-on`; the closest portable equivalent for the runtime image is the `node:24-bookworm-slim` Debian-slim image (Debian = Ubuntu's upstream), which includes Node 24 and matches the Devcontainer's `bookworm` baseline.
 
@@ -626,7 +626,7 @@ pipelines:
 
 > Note: If your Bitbucket workspace does not have a self-hosted `ubuntu-slim` runner, remove the `runs-on` block to fall back to the default Atlassian-hosted runner; the `image: node:24-bookworm-slim` keeps the toolchain consistent.
 
-- [ ] **Step 3: Validate YAML inside the Devcontainer**
+- [x] **Step 3: Validate YAML inside the Devcontainer**
 
 ```bash
 node -e "const y = require('js-yaml'); y.load(require('fs').readFileSync('bitbucket-pipelines.yml','utf8')); console.log('YAML OK')" \
