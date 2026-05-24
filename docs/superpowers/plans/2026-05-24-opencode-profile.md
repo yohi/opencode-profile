@@ -635,7 +635,7 @@ node -e "const y = require('js-yaml'); y.load(require('fs').readFileSync('bitbuc
 
 Expected: `YAML OK`. (Both paths are provided since the Devcontainer ships Python by default; install `js-yaml` only if needed.)
 
-- [ ] **Step 4: Commit, push, open Draft PR**
+- [x] **Step 4: Commit, push, open Draft PR**
 
 ```bash
 git add bitbucket-pipelines.yml
@@ -648,7 +648,7 @@ gh pr create --draft \
   --body "Implements Task 0.2 from docs/superpowers/plans/2026-05-24-opencode-profile.md. Parent PR: <PR_0_1_URL>."
 ```
 
-Record the Draft PR URL as **PR_0_2_URL**.
+Record the Draft PR URL as **PR_0_2_URL**: https://github.com/yohi/opencode-profile/pull/3
 
 ---
 
