@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.tsbuildinfo
+*.tsbuildinfo
+coverage/
+.DS_Store
+
+# Local OpenCode source checkout (vendored for reference; not part of this repo)
+opencode/
