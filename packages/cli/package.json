@@ -1,0 +1,19 @@
+{
+  "name": "@yohi/opencode-profile-cli",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "opencode-profile": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@yohi/opencode-profile-core": "0.0.0"
+  }
+}

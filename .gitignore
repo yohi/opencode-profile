@@ -1,9 +1,12 @@
 node_modules/
 dist/
+coverage/
 .tsbuildinfo
 *.tsbuildinfo
-coverage/
 .DS_Store
+.env
+.env.*
+!.env.example
 
 # Local OpenCode source checkout (vendored for reference; not part of this repo)
 opencode/

@@ -1,0 +1,33 @@
+{
+  "name": "opencode-profile",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/plugin",
+    "packages/cli"
+  ],
+  "scripts": {
+    "lint": "oxlint packages",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc -b",
+    "build": "tsc -b",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "ci": "npm run format:check && npm run lint && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^24.0.0",
+    "vitest": "^2.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "prettier": "^3.3.0",
+    "oxlint": "^0.10.0",
+    "execa": "^9.0.0"
+  }
+}
