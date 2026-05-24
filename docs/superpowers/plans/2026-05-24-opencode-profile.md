@@ -537,7 +537,7 @@ npm test
 
 Expected: `npm install` succeeds, `tsc -b` produces no errors, `oxlint` and `prettier --check` report 0 issues, and `vitest run` reports `No test files found` (exit 0) or runs 0 tests.
 
-- [ ] **Step 14: Commit**
+- [x] **Step 14: Commit**
 
 ```bash
 git add .devcontainer .gitignore .prettierrc.json .prettierignore .oxlintrc.json \
