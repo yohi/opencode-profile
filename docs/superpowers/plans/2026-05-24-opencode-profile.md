@@ -185,7 +185,7 @@ opencode-profile/
 - Create: `packages/cli/vitest.config.ts`
 - Create: `packages/cli/src/index.ts`
 
-- [ ] **Step 1: Branch creation and base validation**
+- [x] **Step 1: Branch creation and base validation**
 
 ```bash
 git fetch origin
@@ -203,7 +203,7 @@ git merge-base --is-ancestor "${EXPECTED_BASE}" "${CURRENT_BRANCH}" \
 echo "OK: ${CURRENT_BRANCH} is a descendant of ${EXPECTED_BASE}."
 ```
 
-- [ ] **Step 2: Write `.devcontainer/Dockerfile`**
+- [x] **Step 2: Write `.devcontainer/Dockerfile`**
 
 ```dockerfile
 FROM mcr.microsoft.com/devcontainers/typescript-node:24-bookworm
@@ -221,7 +221,7 @@ RUN apt-get update \
 USER node
 ```
 
-- [ ] **Step 3: Write `.devcontainer/devcontainer.json`**
+- [x] **Step 3: Write `.devcontainer/devcontainer.json`**
 
 ```jsonc
 {
@@ -245,7 +245,7 @@ USER node
 }
 ```
 
-- [ ] **Step 4: Write `.gitignore`**
+- [x] **Step 4: Write `.gitignore`**
 
 ```gitignore
 node_modules/
@@ -258,7 +258,7 @@ coverage/
 !.env.example
 ```
 
-- [ ] **Step 5: Write `.prettierrc.json` and `.prettierignore`**
+- [x] **Step 5: Write `.prettierrc.json` and `.prettierignore`**
 
 `.prettierrc.json`:
 ```json
@@ -278,7 +278,7 @@ coverage
 *.tsbuildinfo
 ```
 
-- [ ] **Step 6: Write `.oxlintrc.json`**
+- [x] **Step 6: Write `.oxlintrc.json`**
 
 ```json
 {
@@ -290,7 +290,7 @@ coverage
 }
 ```
 
-- [ ] **Step 7: Write root `package.json`**
+- [x] **Step 7: Write root `package.json`**
 
 ```jsonc
 {
@@ -322,7 +322,7 @@ coverage
 }
 ```
 
-- [ ] **Step 8: Write `tsconfig.base.json`**
+- [x] **Step 8: Write `tsconfig.base.json`**
 
 ```json
 {
@@ -344,7 +344,7 @@ coverage
 }
 ```
 
-- [ ] **Step 9: Write `vitest.workspace.ts`**
+- [x] **Step 9: Write `vitest.workspace.ts`**
 
 ```ts
 export default [
@@ -354,7 +354,7 @@ export default [
 ]
 ```
 
-- [ ] **Step 10: Create `packages/core` stubs**
+- [x] **Step 10: Create `packages/core` stubs**
 
 `packages/core/package.json`:
 ```jsonc
@@ -408,7 +408,7 @@ export default defineConfig({
 export {}
 ```
 
-- [ ] **Step 11: Create `packages/plugin` stubs**
+- [x] **Step 11: Create `packages/plugin` stubs**
 
 `packages/plugin/package.json`:
 ```jsonc
@@ -468,7 +468,7 @@ export default defineConfig({
 export {}
 ```
 
-- [ ] **Step 12: Create `packages/cli` stubs**
+- [x] **Step 12: Create `packages/cli` stubs**
 
 `packages/cli/package.json`:
 ```jsonc
@@ -523,7 +523,7 @@ export default defineConfig({
 export {}
 ```
 
-- [ ] **Step 13: Open the Devcontainer and verify the toolchain**
+- [x] **Step 13: Open the Devcontainer and verify the toolchain**
 
 From VS Code: "Dev Containers: Reopen in Container". Then **inside the Devcontainer terminal**:
 
