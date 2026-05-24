@@ -17,5 +17,7 @@
     "build": "tsc -b",
     "test": "vitest run"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
 }

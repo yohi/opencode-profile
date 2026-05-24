@@ -884,7 +884,7 @@ Record the URL as **PR_1_1_URL**: https://github.com/yohi/opencode-profile/pull/
 - Create: `packages/core/src/jsonc.ts`
 - Create: `packages/core/test/jsonc.test.ts`
 
-- [ ] **Step 1: Branch creation and base validation (inside the Devcontainer)**
+- [x] **Step 1: Branch creation and base validation (inside the Devcontainer)**
 
 ```bash
 git fetch origin
@@ -900,13 +900,13 @@ git merge-base --is-ancestor "${EXPECTED_BASE}" "${CURRENT_BRANCH}" \
 echo "OK: ${CURRENT_BRANCH} is a descendant of ${EXPECTED_BASE}."
 ```
 
-- [ ] **Step 2: Add `jsonc-parser` dependency**
+- [x] **Step 2: Add `jsonc-parser` dependency**
 
 ```bash
 npm install jsonc-parser@^3.3.0 -w @yohi/opencode-profile-core
 ```
 
-- [ ] **Step 3: Write the failing tests**
+- [x] **Step 3: Write the failing tests**
 
 `packages/core/test/jsonc.test.ts`:
 ```ts
@@ -959,7 +959,7 @@ describe("readJsoncFile", () => {
 })
 ```
 
-- [ ] **Step 4: Run tests to verify they fail**
+- [x] **Step 4: Run tests to verify they fail**
 
 ```bash
 npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
@@ -967,7 +967,7 @@ npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
 
 Expected: FAIL on `jsonc.test.ts`; `merge.test.ts` still passes.
 
-- [ ] **Step 5: Implement `packages/core/src/jsonc.ts`**
+- [x] **Step 5: Implement `packages/core/src/jsonc.ts`**
 
 ```ts
 import { parse, printParseErrorCode, type ParseError } from "jsonc-parser"
@@ -997,7 +997,7 @@ export function readJsoncFile(path: string): unknown {
 }
 ```
 
-- [ ] **Step 6: Run tests to verify they pass**
+- [x] **Step 6: Run tests to verify they pass**
 
 ```bash
 npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
@@ -1005,7 +1005,7 @@ npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
 
 Expected: PASS for both `merge.test.ts` and `jsonc.test.ts`.
 
-- [ ] **Step 7: Typecheck, lint, format**
+- [x] **Step 7: Typecheck, lint, format**
 
 ```bash
 npm run typecheck && npm run lint && npm run format:check
