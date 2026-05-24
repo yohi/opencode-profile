@@ -667,7 +667,7 @@ All Phase 1 tasks run **inside the Devcontainer**. TDD order matches design §8.
 - Create: `packages/core/src/merge.ts`
 - Create: `packages/core/test/merge.test.ts`
 
-- [ ] **Step 1: Branch creation and base validation (inside the Devcontainer)**
+- [x] **Step 1: Branch creation and base validation (inside the Devcontainer)**
 
 ```bash
 git fetch origin
@@ -683,7 +683,7 @@ git merge-base --is-ancestor "${EXPECTED_BASE}" "${CURRENT_BRANCH}" \
 echo "OK: ${CURRENT_BRANCH} is a descendant of ${EXPECTED_BASE}."
 ```
 
-- [ ] **Step 2: Write the failing tests**
+- [x] **Step 2: Write the failing tests**
 
 `packages/core/test/merge.test.ts`:
 ```ts
@@ -763,7 +763,7 @@ describe("applyOverlayInPlace", () => {
 })
 ```
 
-- [ ] **Step 3: Run tests to verify they fail**
+- [x] **Step 3: Run tests to verify they fail**
 
 ```bash
 cd /workspaces/opencode-profile  # or repo root inside container
@@ -772,7 +772,7 @@ npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
 
 Expected: FAIL — `Cannot find module '../src/merge.js'` or similar.
 
-- [ ] **Step 4: Implement `packages/core/src/merge.ts`**
+- [x] **Step 4: Implement `packages/core/src/merge.ts`**
 
 ```ts
 export interface MergeOptions {
@@ -837,7 +837,7 @@ export function applyOverlayInPlace<T extends object>(
 }
 ```
 
-- [ ] **Step 5: Run tests to verify they pass**
+- [x] **Step 5: Run tests to verify they pass**
 
 ```bash
 npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
@@ -845,7 +845,7 @@ npm test -w @yohi/opencode-profile-core -- --run --reporter=basic
 
 Expected: PASS (12+ assertions).
 
-- [ ] **Step 6: Typecheck and lint**
+- [x] **Step 6: Typecheck and lint**
 
 ```bash
 npm run typecheck
@@ -855,7 +855,7 @@ npm run format:check
 
 Expected: 0 errors on all three.
 
-- [ ] **Step 7: Commit, push, open Draft PR**
+- [x] **Step 7: Commit, push, open Draft PR**
 
 ```bash
 git add packages/core/src/merge.ts packages/core/test/merge.test.ts
@@ -868,7 +868,7 @@ gh pr create --draft \
   --body "Implements Task 1.1 from docs/superpowers/plans/2026-05-24-opencode-profile.md. Parent PR: <PR_0_2_URL>."
 ```
 
-Record the URL as **PR_1_1_URL**.
+Record the URL as **PR_1_1_URL**: https://github.com/yohi/opencode-profile/pull/4
 
 ---
 
