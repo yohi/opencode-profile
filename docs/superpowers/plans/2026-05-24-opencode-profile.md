@@ -1013,7 +1013,7 @@ npm run typecheck && npm run lint && npm run format:check
 
 Expected: 0 errors on all three.
 
-- [ ] **Step 8: Commit, push, Draft PR**
+- [x] **Step 8: Commit, push, Draft PR**
 
 ```bash
 git add packages/core/package.json package-lock.json \
@@ -1027,7 +1027,7 @@ gh pr create --draft \
   --body "Implements Task 1.2 from docs/superpowers/plans/2026-05-24-opencode-profile.md. Parent PR: <PR_1_1_URL>."
 ```
 
-Record as **PR_1_2_URL**.
+Record as **PR_1_2_URL**: https://github.com/yohi/opencode-profile/pull/5
 
 ---
 
