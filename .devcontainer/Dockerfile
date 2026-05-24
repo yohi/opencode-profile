@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/devcontainers/typescript-node:24-bookworm
-
 # Bun (1.3.14) for parity with OpenCode upstream tooling.
-ARG BUN_VERSION=1.3.14
-RUN curl -fsSL https://bun.sh/install | bash -s "bun-v${BUN_VERSION}" \
-    && ln -s /root/.bun/bin/bun /usr/local/bin/bun || true
+# https://bun.sh/docs/installation#docker
+FROM oven/bun:1.3.14 AS bun
+
+FROM mcr.microsoft.com/devcontainers/typescript-node:24-bookworm
+COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
 
 # GitHub CLI for `gh pr create`.
 RUN apt-get update \

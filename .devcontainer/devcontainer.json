@@ -1,7 +1,7 @@
 {
   "name": "opencode-profile",
   "build": { "dockerfile": "Dockerfile" },
-  "remoteUser": "root",
+  "remoteUser": "node",
   "postCreateCommand": "npm install",
   "containerEnv": {
     "OPENCODE_PROFILE_TEST_HOME": "/tmp/opencode-profile-test-home"
